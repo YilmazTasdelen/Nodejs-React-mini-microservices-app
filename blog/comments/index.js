@@ -31,6 +31,8 @@ app.post('/posts/:id/comments', async (req, res) => {
             content,
             postId: req.params.id
         }
+    }).catch((err) => {
+        console.log(err.message);
     });
 
     res.status(201).send(comments);
