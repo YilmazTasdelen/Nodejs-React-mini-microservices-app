@@ -53,7 +53,7 @@ app.listen(4002, async () => {
     const res = await axios.get('http://localhost:4005/events');
 
     for (let event of res.data) {
-        consolke.log('processing event', event.data);
+        console.log('processing event', event.data);
         handleEvent(event.type, event.data);
     }
 });
